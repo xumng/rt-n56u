@@ -290,7 +290,7 @@ local function processData(szType, content)
 end
 -- wget
 local function wget(url)
-	local stdout = io.popen('curl -k -s --connect-timeout 15 --retry 5 "' .. url .. '"')
+	local stdout = io.popen('curl -k -s --connect-timeout 15 --retry 5 "' .. url .. '" --user-agent "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.63 Safari/537.36"')
 	local sresult = stdout:read("*all")
     return trim(sresult)
 end
