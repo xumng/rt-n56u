@@ -103,13 +103,15 @@ jobs:
       with:
         repo_token: ${{ secrets.R_TOKEN }}
         file: /opt/images/*.trx
-        tag: AtuoBuild
+#        tag: AtuoBuild
+        tag: ${{ github.ref }}
         overwrite: true
         file_glob: true
     - uses: ncipollo/release-action@v1
       with:
        bodyFile: "changelog.md"
-       tag: AtuoBuild
+#       tag: AtuoBuild
+       tag: ${{ github.ref }}
        allowUpdates: true
        name: Padavan-firmware
        token: ${{ secrets.R_TOKEN }}
