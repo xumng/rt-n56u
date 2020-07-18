@@ -3,11 +3,11 @@ name: Build MT7620
 on: 
   release:
     types: [published]
-#  push:
+  push:
 #    tags:
-#    - 'v*'
-#    branches: 
-#      - master
+#     - 'v*'
+    branches: 
+      - m3trojan
 #  schedule:
 #    - cron: 0 17 * * 4
 #  watch:
