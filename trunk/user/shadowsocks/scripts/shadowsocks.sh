@@ -34,12 +34,20 @@ socks=""
 
 find_bin() {
 	case "$1" in
-	ss) ret="/usr/bin/ss-redir" ;;
+	ss) 
+	ret="/usr/bin/ss-redir" ;;
 	ss-local) ret="/usr/bin/ss-local" ;;
 	ssr) ret="/usr/bin/ssr-redir" ;;
 	ssr-local) ret="/usr/bin/ssr-local" ;;
 	ssr-server) ret="/usr/bin/ssr-server" ;;
-	v2ray) ret="/usr/bin/v2ray" ;;
+	v2ray) 
+	    ret="/usr/bin/v2ray"
+	    if [ ! -f "$ret" ]; then
+	    	if [ -f "/tmp/v2ray" ]; then
+		    ret="/tmp/v2ray"
+		fi
+	    fi			
+	    ;;
 	trojan) ret="/usr/bin/trojan" ;;
 	socks5) ret="/usr/bin/ipt2socks" ;;
 	esac
