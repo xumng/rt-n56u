@@ -148,6 +148,7 @@
 			{"v2_quic_key_x", "24", NULL, FALSE},
 			{"v2_quic_security_x", "24", NULL, FALSE},
 			{"v2_tls_x", "24", NULL, FALSE},
+		        {"v2_flow_x", "24", NULL, FALSE},
 			{"tj_tls_host_x", "24", NULL, FALSE},
 			{"switch_enable_x", "24", NULL, FALSE},
 			{0,0,0,0}
@@ -598,7 +599,7 @@
 			{"dhcp_staticnum_x", "", NULL, EVM_RESTART_DHCPD},
 			{"dnsmasq.hosts", "File", NULL, EVM_RESTART_DHCPD},
 			{"dnsmasq.dnsmasq.conf", "File", NULL, EVM_RESTART_DHCPD},
-			{"dnsmasq.dnsmasq.servers", "File", NULL, EVM_RESTART_DHCPD},
+			{"dnsmasq.dhcp.conf", "File", NULL, EVM_RESTART_DHCPD},
 			{"http_access", "", NULL, EVM_RESTART_HTTPD},
 			{"http_proto", "", NULL, EVM_RESTART_HTTPD},
 			{"http_lanport", "", NULL, EVM_RESTART_HTTPD},
@@ -971,6 +972,7 @@
 			{"wyy_musicapptype", "", NULL, EVM_RESTART_WYY},
 			{"wyy_coustom_server", "", NULL, EVM_RESTART_WYY},
 			{"wyy_coustom_music", "", NULL, EVM_RESTART_WYY},
+			{"wyy_flac", "", NULL, EVM_RESTART_WYY},
 			{"wyy_staticnum_x", "", NULL, EVM_RESTART_WYY},
 			{"WIPList", "Group", ARGV((char*)variables_WyyConf_WIPList, "8", "55", "wyy_staticnum_x"), EVM_RESTART_WYY},
 			{0,0,0,0}
@@ -981,6 +983,9 @@
 	struct variable variables_ZeroConf[] = {
 			{"zerotier_enable", "", NULL, EVM_RESTART_ZEROTIER},
 			{"zerotier_id", "", NULL, EVM_RESTART_ZEROTIER},
+		        {"zerotier_moonid", "", NULL, EVM_RESTART_ZEROTIER},
+			{"zerotiermoon_enable", "", NULL, EVM_RESTART_ZEROTIER},
+			{"zerotiermoon_ip", "", NULL, EVM_RESTART_ZEROTIER},
 			{"zerotier_nat", "", NULL, EVM_RESTART_ZEROTIER},
 			{"zero_staticnum_x", "", NULL, EVM_RESTART_ZEROTIER},
 			{"ZeroList", "Group", ARGV((char*)variables_ZeroConf_ZeroList, "8", "55", "zero_staticnum_x"), EVM_RESTART_ZEROTIER},
@@ -1016,6 +1021,7 @@
 			{"d_v2_host","",NULL, EVM_RESTART_SHADOWSOCKS},
 			{"d_v2_path","",NULL, EVM_RESTART_SHADOWSOCKS},
 			{"d_v2_tls","",NULL, EVM_RESTART_SHADOWSOCKS},
+		        {"d_v2_flow","",NULL, EVM_RESTART_SHADOWSOCKS},
 			{"d_ss_password","",NULL, EVM_RESTART_SHADOWSOCKS},
 			{"d_ss_method","",NULL, EVM_RESTART_SHADOWSOCKS},
 			{"d_ss_protocol","",NULL, EVM_RESTART_SHADOWSOCKS},
